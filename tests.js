@@ -1,6 +1,7 @@
 module.exports = {
   "extends": "./index.js",
   "env": {
+    "jest": true,
     "mocha": true
   },
   "rules": {

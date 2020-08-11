@@ -1,6 +1,6 @@
 module.exports = {
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:flowtype/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended"
