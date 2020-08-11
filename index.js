@@ -16,6 +16,7 @@ module.exports = {
     "import/no-cycle": "off",
     "linebreak-style": "off",
     "max-len": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "unicorn/filename-case": "off",
   },
