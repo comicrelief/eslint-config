@@ -20,5 +20,6 @@ module.exports = {
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "unicorn/filename-case": "off",
+    "unicorn/no-null": "off"
   },
 };
