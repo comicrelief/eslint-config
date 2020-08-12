@@ -1,10 +1,15 @@
 module.exports = {
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:flowtype/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "plugin:prettier/recommended"
   ],
+  "env": {
+    "es6": true,
+    "node": true,
+  },
   "parser": "babel-eslint",
   "plugins": [
     "flowtype",
@@ -19,5 +24,6 @@ module.exports = {
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "unicorn/filename-case": "off",
+    "unicorn/no-null": "off"
   },
 };
