@@ -6,6 +6,10 @@ module.exports = {
     "plugin:unicorn/recommended",
     "plugin:prettier/recommended"
   ],
+  "env": {
+    "es6": true,
+    "node": true,
+  },
   "parser": "babel-eslint",
   "plugins": [
     "flowtype",
