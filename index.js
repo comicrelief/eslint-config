@@ -3,7 +3,8 @@ module.exports = {
     "airbnb-base",
     "plugin:flowtype/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended"
+    "plugin:unicorn/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "babel-eslint",
   "plugins": [
