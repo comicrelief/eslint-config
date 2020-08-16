@@ -10,7 +10,7 @@ module.exports = {
     "es6": true,
     "node": true,
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "plugins": [
     "flowtype",
     "sonarjs",
@@ -24,6 +24,7 @@ module.exports = {
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "unicorn/filename-case": "off",
-    "unicorn/no-null": "off"
+    "unicorn/no-null": "off",
+    "prettier/prettier": ["error", { "singleQuote": true }]
   },
 };
