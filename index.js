@@ -25,6 +25,6 @@ module.exports = {
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "unicorn/filename-case": "off",
     "unicorn/no-null": "off",
-    "prettier/prettier": ["error", { "singleQuote": true }]
+    "prettier/prettier": ["error", { "singleQuote": true, "printWidth": 150 }]
   },
 };
