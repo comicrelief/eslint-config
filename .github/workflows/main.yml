@@ -1,0 +1,34 @@
+name: main
+
+on: [push]
+
+jobs:
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Publish on NPM.
+        run: |
+          yarn install
+          yarn semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish on Github Package Registry
+        run: |
+          echo "//npm.pkg.github.com/@comicrelief:_authToken=$GH_TOKEN" > .npmrc
+          npm publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
