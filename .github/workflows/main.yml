@@ -25,10 +25,15 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Setup for Github Package Registry
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://npm.pkg.github.com/
+          scope: '@comicrelief'
+
       - name: Publish on Github Package Registry
-        run: |
-          echo "//npm.pkg.github.com/@comicrelief:_authToken=$GH_TOKEN" > .npmrc
-          npm publish
+        run: npm publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
