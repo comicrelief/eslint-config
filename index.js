@@ -4,7 +4,6 @@ module.exports = {
     "plugin:flowtype/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended",
-    "plugin:prettier/recommended"
   ],
   "env": {
     "es6": true,
@@ -26,6 +25,5 @@ module.exports = {
     "unicorn/filename-case": "off",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
-    "prettier/prettier": ["error", { "singleQuote": true, "printWidth": 150 }]
   },
 };
