@@ -71,3 +71,15 @@ yarn add --dev \
 - Add / edit / remove rules as required.
 - Push a branch to this repo.
 - Test linting on a candidate repo by installing the develpoment branch via `@comicrelief/eslint-config#branch_name`.
+
+## Notes
+
+If you're using the [ESLint plugin](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) for Visual Studio Code and you want to lint TypeScript files, you need to add the following key to your `settings.json`:
+
+```json
+{
+  "eslint.validate": ["typescript"]
+}
+```
+
+The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P *Preferences: Open Settings (JSON)*.
