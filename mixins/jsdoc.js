@@ -7,7 +7,7 @@ module.exports = {
   ],
   "rules": {
     // Enable JSdoc checks
-    "jsdoc/require-jsdoc": [2, {
+    "jsdoc/require-jsdoc": ["error", {
       checkGetters: true,
       checkSetters: true,
       publicOnly: true,
