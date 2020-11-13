@@ -25,7 +25,7 @@ module.exports = {
     // will create an automatic jsdoc block
     // which is helpful, but still incomplete.
     // We want to flag those
-    "jsdoc/require-description": 2,
+    "jsdoc/require-description": "error",
 
     // Parameters and returns may be self explaining
     "jsdoc/require-param-description": "off",
@@ -41,7 +41,7 @@ module.exports = {
     "jsdoc/require-returns": "off",
 
     // Add custom JSdoc tags
-    "jsdoc/check-tag-names": [2, {
+    "jsdoc/check-tag-names": ["error", {
       definedTags: [
         "mermaid"
       ],
