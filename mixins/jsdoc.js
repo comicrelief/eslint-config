@@ -39,6 +39,7 @@ module.exports = {
     // Requiring returns really means
     // requiring types, see above
     "jsdoc/require-returns": "off",
+    "jsdoc/require-returns-type": "off",
 
     // Add custom JSdoc tags
     "jsdoc/check-tag-names": ["error", {
