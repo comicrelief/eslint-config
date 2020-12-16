@@ -14,6 +14,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "linebreak-style": "off",
     "max-len": "off",
+    "no-await-in-loop": "off",
     "no-restricted-syntax": "off",
     "no-unused-vars": ["error", {
       "argsIgnorePattern": "^_",
