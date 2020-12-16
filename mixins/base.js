@@ -15,7 +15,10 @@ module.exports = {
     "linebreak-style": "off",
     "max-len": "off",
     "no-restricted-syntax": "off",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-unused-vars": ["error", {
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_",
+    }],
     "prefer-destructuring": "off",
   },
 };
