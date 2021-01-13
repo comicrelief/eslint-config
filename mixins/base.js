@@ -52,5 +52,10 @@ module.exports = {
       "varsIgnorePattern": "^_",
     }],
     "prefer-destructuring": "off",
+    // Also order the individual import members
+    // from each file declaration
+    "sort-imports": ["error", {
+      "ignoreDeclarationSort": true,
+    }]
   },
 };
