@@ -12,6 +12,37 @@ module.exports = {
     "import/extensions": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/order": ["error", {
+      "alphabetize": {
+        "order": "asc",
+      },
+      "groups": ["builtin", "external", "internal"],
+      "pathGroups": [
+        // Order all @comicrelief packages
+        // just after the external packages
+        {
+          "pattern": "@comicrelief/**",
+          "group": "external",
+          "position": "after",
+        },
+        // Order all @/src/**
+        // just before all local/relative imports
+        {
+          "pattern": "@/src/**",
+          "group": "internal",
+          "position": "before",
+        },
+        // Order all remaining alias
+        // just before all local/relative imports
+        {
+          "pattern": "@/**",
+          "group": "internal",
+          "position": "before",
+        },
+      ],
+      "pathGroupsExcludedImportTypes": ["builtin"],
+      "newlines-between": "always"
+    }],
     "linebreak-style": "off",
     "max-len": "off",
     "no-await-in-loop": "off",
