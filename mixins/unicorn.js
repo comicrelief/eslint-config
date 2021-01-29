@@ -8,6 +8,7 @@ module.exports = {
   "rules": {
     "unicorn/filename-case": "off",
     "unicorn/no-null": "off",
+    "unicorn/no-array-for-each": "off",
     "unicorn/prevent-abbreviations": "off",
   },
 };
