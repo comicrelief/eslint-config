@@ -14,5 +14,7 @@ module.exports = {
     "@typescript-eslint/semi": "error",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2, { "SwitchCase": 0 }],
   },
 }
