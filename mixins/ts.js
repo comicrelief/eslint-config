@@ -9,10 +9,15 @@ module.exports = {
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    // these eslint rules can report incorrect errors in TypeScript files
+    // these rules can report incorrect errors or crash in TypeScript files
     "semi": "off",
-    "@typescript-eslint/semi": "error",
     "no-shadow": "off",
+    "indent": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "import/no-useless-path-segments": "off",
+    // these are the replacement "extension rules" from @typescript-eslint
+    "@typescript-eslint/semi": "error",
     "@typescript-eslint/no-shadow": "error",
+    "@typescript-eslint/indent": ["error", 2, { "SwitchCase": 0 }],
   },
 }
