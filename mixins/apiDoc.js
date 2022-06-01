@@ -31,12 +31,5 @@ module.exports = {
         ],
       },
     ],
-    // Allows for spaces of JSDoc and other comment blocks. This is disabled by the base config, but helps for formatting.
-    "no-trailing-spaces": [
-      "error",
-      {
-        ignoreComments: true,
-      },
-    ],
   },
 };
