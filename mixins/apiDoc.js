@@ -28,7 +28,6 @@ module.exports = {
           "apiSuccessExample",
           "apiUse",
           "apiVersion",
-          "mermaid",
         ],
       },
     ],
