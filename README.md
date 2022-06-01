@@ -33,6 +33,7 @@ As well as our default ESLint config, various common customisations are availabl
 - `mocha`: Uses the `mocha` environment.
 - `sonarjs`: Adds [SonarJS](https://github.com/SonarSource/eslint-plugin-sonarjs) rules.
 - `unicorn`: Adds [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn#readme) rules.
+- `apiDoc`: Extends `jsdoc` to include [apiDoc](https://apidocjs.com/) tags.
 
 For example, in order for linting to work in tests, you should include the `jest` or `mocha` mixin:
 
