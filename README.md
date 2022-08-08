@@ -2,6 +2,8 @@
 
 Shared ESLint configuration for Comic Relief codebases.
 
+**As of version 2.0.0, we require ESLint 8.** Older versions of ESLint have compatibility issues with some plugins and are no longer supported.
+
 ## Usage
 
 1. Install `eslint` if you haven't already done so.
