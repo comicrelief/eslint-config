@@ -6,10 +6,21 @@
   "repository": "git@github.com:comicrelief/eslint-config.git",
   "author": "Comic Relief",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "mixins"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "./tests/test.sh"
+  },
   "peerDependencies": {
     "eslint": "^8.17.0"
   },
   "devDependencies": {
+    "eslint": "^8.21.0",
     "semantic-release": "^17.1.1"
   },
   "dependencies": {
@@ -25,8 +36,5 @@
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "typescript": "^4.0.5"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

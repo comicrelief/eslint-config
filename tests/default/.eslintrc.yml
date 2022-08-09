@@ -1,0 +1,6 @@
+root: true
+
+extends:
+  - '../../'
+
+parser: '@babel/eslint-parser'
