@@ -32,4 +32,6 @@ expect_lint_passes () {
 expect_lint_passes tests/default
 expect_lint_passes tests/typescript
 expect_lint_passes tests/apidoc
+expect_lint_passes tests/mocha
+expect_lint_passes tests/jest
 report

@@ -1,0 +1,7 @@
+root: true
+
+extends:
+  - '../../'
+  - '../../mixins/mocha'
+
+parser: '@babel/eslint-parser'
