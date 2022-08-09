@@ -3,4 +3,4 @@ root: true
 extends:
   - '../../mixins/base'
   - '../../mixins/jsdoc'
-  - '../../mixins/apidoc'
+  - '../../mixins/apiDoc'
