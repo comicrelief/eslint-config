@@ -31,5 +31,7 @@ module.exports = {
         ],
       },
     ],
+    // Allow blank lines between tags
+    "jsdoc/tag-lines": "off",
   },
 };
