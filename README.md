@@ -72,6 +72,7 @@ yarn add --dev \
 - Clone the repository.
 - Install the dependencies via `yarn install`.
 - Add / edit / remove rules as required.
+- Test on the example files via `yarn test`.
 - Push a branch to this repo.
 - Test linting on a candidate repo by installing the develpoment branch via `@comicrelief/eslint-config#branch_name`.
 

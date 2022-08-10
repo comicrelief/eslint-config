@@ -6,14 +6,31 @@
   "repository": "git@github.com:comicrelief/eslint-config.git",
   "author": "Comic Relief",
   "license": "MIT",
+  "files": [
+    "index.js",
+    "mixins"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "./tests/test.sh"
+  },
   "peerDependencies": {
     "eslint": "^8.17.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.21.0",
     "semantic-release": "^17.1.1"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.11.3",
+    "@babel/plugin-syntax-flow": "^7.18.6",
+    "@babel/plugin-transform-react-jsx": "^7.18.10",
     "@typescript-eslint/parser": "^4.7.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -25,8 +42,5 @@
     "eslint-plugin-sonarjs": "^0.13.0",
     "eslint-plugin-unicorn": "^42.0.0",
     "typescript": "^4.0.5"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
