@@ -64,7 +64,8 @@ Some of the configurations require additional dependencies. They are not listed 
 ```bash
 yarn add --dev \
   @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser
+  @typescript-eslint/parser \
+  typescript
 ```
 
 ## Development
