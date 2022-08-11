@@ -2,17 +2,21 @@
 
 Shared ESLint configuration for Comic Relief codebases.
 
-**As of version 2.0.0, we require ESLint 8.** Older versions of ESLint have compatibility issues with some plugins and are no longer supported.
+If you're upgrading to version 2.x, see [Upgrade guides](#1x-to-2x).
 
 ## Usage
 
 1. Install `eslint` if you haven't already done so.
 
-       yarn add eslint --dev
+   ```bash
+   yarn add --dev eslint
+   ```
 
-2. Install this package.
+2. Install this package and any [additional dependencies](#dependencies) you require.
 
-       yarn add @comicrelief/eslint-config --dev
+   ```bash
+   yarn add --dev @comicrelief/eslint-config eslint-plugin-import
+   ```
 
 3. Extend the desired configuration in your project's ESLint config:
 
@@ -57,15 +61,66 @@ extends:
 
 ## Dependencies
 
-Some of the configurations require additional dependencies. They are not listed as `peerDependencies` in `package.json` as they might not be used in all projects.
+ESLint plugins and parsers must be added explicitly to your project's dev dependencies. They are listed as peer dependencies of this config. Note that you may not need to install all of them if you do not use certain mixins.
+
+The commands below will install everything you need for each config, including in some cases the peer dependencies of our peer dependencies.
+
+### `@comicrelief/eslint-config`
+
+```bash
+yarn add --dev \
+  @babel/eslint-parser@^7.11.3 \
+  eslint-plugin-flowtype@^8.0.3 \
+  eslint-plugin-import@^2.25.2 \
+  eslint-plugin-sonarjs@^0.13.0 \
+  eslint-plugin-unicorn@^42.0.0
+```
+
+### `@comicrelief/eslint-config/mixins/base`
+
+```bash
+yarn add --dev \
+  eslint-plugin-import@^2.25.2
+```
+
+### `@comicrelief/eslint-config/mixins/flowtype`
+
+```bash
+yarn add --dev \
+  @babel/eslint-parser@^7.11.3 \
+  @babel/plugin-syntax-flow@^7.18.6 \
+  @babel/plugin-transform-react-jsx@^7.18.10 \
+  eslint-plugin-flowtype@^8.0.3
+```
+
+### `@comicrelief/eslint-config/mixins/jsdoc`
+
+```bash
+yarn add --dev \
+  eslint-plugin-jsdoc@^39.3.2
+```
+
+### `@comicrelief/eslint-config/mixins/sonarjs`
+
+```bash
+yarn add --dev \
+  eslint-plugin-sonarjs@^0.13.0
+```
 
 ### `@comicrelief/eslint-config/mixins/ts`
 
 ```bash
 yarn add --dev \
-  @typescript-eslint/eslint-plugin \
-  @typescript-eslint/parser \
+  @typescript-eslint/eslint-plugin@^5.33.0 \
+  @typescript-eslint/parser@^5.33.0 \
   typescript
+```
+
+### `@comicrelief/eslint-config/mixins/unicorn`
+
+```bash
+yarn add --dev \
+  eslint-plugin-unicorn@^42.0.0
 ```
 
 ## Development
@@ -88,3 +143,17 @@ If you're using the [ESLint plugin](https://marketplace.visualstudio.com/items?i
 ```
 
 The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P *Preferences: Open Settings (JSON)*.
+
+## Upgrade guides
+
+### 1.x to 2.x
+
+- **ESLint 8 is required.** (as of 2.0.0)
+
+  Older versions of ESLint have compatibility issues with some plugins and are no longer supported.
+
+- **You must explicitly add ESLint plugins to your dependencies.** (as of 2.0.3)
+
+  Package managers have no obligation to place *subdependencies* in `node_modules`, which means having them as dependencies of our config is not a guaranteed way of making them available to ESLint. So far we've just been lucky. They are now all peer dependencies.
+  
+  See [Dependencies](#dependencies) for what you need to install.
