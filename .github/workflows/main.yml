@@ -44,7 +44,7 @@ jobs:
           yarn semantic-release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISHING_TOKEN }}
 
       - name: Setup for Github Package Registry
         uses: actions/setup-node@v1
