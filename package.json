@@ -17,31 +17,57 @@
     "test": "./tests/test.sh"
   },
   "peerDependencies": {
-    "eslint": "^8.17.0"
+    "@babel/eslint-parser": "^7.11.3",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "eslint": "^8.18.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-jsdoc": "^39.3.2",
+    "eslint-plugin-sonarjs": "^0.13.0",
+    "eslint-plugin-unicorn": "^42.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@babel/eslint-parser": {
+      "optional": true
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "eslint-plugin-flowtype": {
+      "optional": true
+    },
+    "eslint-plugin-jsdoc": {
+      "optional": true
+    },
+    "eslint-plugin-sonarjs": {
+      "optional": true
+    },
+    "eslint-plugin-unicorn": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
+    "@babel/eslint-parser": "^7.11.3",
+    "@babel/plugin-syntax-flow": "^7.18.6",
+    "@babel/plugin-transform-react-jsx": "^7.18.10",
     "@babel/preset-env": "^7.18.10",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "chai": "^4.3.6",
     "eslint": "^8.21.0",
-    "semantic-release": "^19.0.3",
-    "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "@babel/eslint-parser": "^7.11.3",
-    "@babel/plugin-syntax-flow": "^7.18.6",
-    "@babel/plugin-transform-react-jsx": "^7.18.10",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-flowtype": "^8.0.3",
-    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jsdoc": "^39.3.2",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.13.0",
-    "eslint-plugin-unicorn": "^42.0.0"
+    "eslint-plugin-unicorn": "^42.0.0",
+    "semantic-release": "^19.0.3",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0"
   }
 }
