@@ -18,7 +18,7 @@ If you're upgrading to version 2.x, see [Upgrade guides](#1x-to-2x).
    yarn add --dev @comicrelief/eslint-config eslint-plugin-import
    ```
 
-3. Extend the desired configuration in your project's ESLint config:
+3. Extend the desired configuration in your project's ESLint config:`
 
    ```yaml
    # .eslintrc.yml
@@ -155,5 +155,5 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
 - **You must explicitly add ESLint plugins to your dependencies.** (as of 2.0.3)
 
   Package managers have no obligation to place *subdependencies* in `node_modules`, which means having them as dependencies of our config is not a guaranteed way of making them available to ESLint. So far we've just been lucky. They are now all peer dependencies.
-  
+
   See [Dependencies](#dependencies) for what you need to install.

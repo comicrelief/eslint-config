@@ -27,7 +27,7 @@ expect_lint_passes () {
 
   echo
   echo "---------- $dir ----------"
-  eslint $dir
+  eslint "$dir"
   if [ $? = 0 ]; then
     passed=$(( $passed + 1 ));
     echo -e "\x1b[32mPassed\x1b[0m"

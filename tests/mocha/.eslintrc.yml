@@ -1,7 +1,12 @@
 root: true
 
 extends:
-  - '../../'
   - '../../mixins/mocha'
 
 parser: '@babel/eslint-parser'
+parserOptions:
+  requireConfigFile: false
+  sourceType: 'module'
+
+rules:
+  'import/no-extraneous-dependencies': 'off'
