@@ -130,7 +130,7 @@ yarn add --dev \
 - Add / edit / remove rules as required.
 - Test on the example files via `yarn test`.
 - Push a branch to this repo.
-- Test linting on a candidate repo by installing the develpoment branch via `@comicrelief/eslint-config#branch_name`.
+- Test linting on a candidate repo by installing the development branch via `@comicrelief/eslint-config#branch_name`.
 
 ## Notes
 
