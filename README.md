@@ -69,27 +69,27 @@ The commands below will install everything you need for each config, including i
 
 ```bash
 yarn add --dev \
-  @babel/eslint-parser@^7.11.3 \
+  @babel/eslint-parser@^7.21.1 \
   eslint-plugin-flowtype@^8.0.3 \
-  eslint-plugin-import@^2.25.2 \
-  eslint-plugin-sonarjs@^0.13.0 \
-  eslint-plugin-unicorn@^42.0.0
+  eslint-plugin-import@^2.31.0 \
+  eslint-plugin-sonarjs@^3.0.2 \
+  eslint-plugin-unicorn@^59.0.1
 ```
 
 ### `@comicrelief/eslint-config/mixins/base`
 
 ```bash
 yarn add --dev \
-  eslint-plugin-import@^2.25.2
+  eslint-plugin-import@^2.31.0
 ```
 
 ### `@comicrelief/eslint-config/mixins/flowtype`
 
 ```bash
 yarn add --dev \
-  @babel/eslint-parser@^7.11.3 \
-  @babel/plugin-syntax-flow@^7.18.6 \
-  @babel/plugin-transform-react-jsx@^7.18.10 \
+  @babel/eslint-parser@^7.21.1 \
+  @babel/plugin-syntax-flow@^7.27.1 \
+  @babel/plugin-transform-react-jsx@^7.27.1 \
   eslint-plugin-flowtype@^8.0.3
 ```
 
@@ -97,22 +97,22 @@ yarn add --dev \
 
 ```bash
 yarn add --dev \
-  eslint-plugin-jsdoc@^39.3.2
+  eslint-plugin-jsdoc@^50.6.17
 ```
 
 ### `@comicrelief/eslint-config/mixins/sonarjs`
 
 ```bash
 yarn add --dev \
-  eslint-plugin-sonarjs@^0.13.0
+  eslint-plugin-sonarjs@^3.0.2
 ```
 
 ### `@comicrelief/eslint-config/mixins/ts`
 
 ```bash
 yarn add --dev \
-  @typescript-eslint/eslint-plugin@^5.33.0 \
-  @typescript-eslint/parser@^5.33.0 \
+  @typescript-eslint/eslint-plugin@^8.32.0 \
+  @typescript-eslint/parser@^7.27.1 \
   typescript
 ```
 
@@ -120,7 +120,7 @@ yarn add --dev \
 
 ```bash
 yarn add --dev \
-  eslint-plugin-unicorn@^42.0.0
+  eslint-plugin-unicorn@^59.0.1
 ```
 
 ## Development
