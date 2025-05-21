@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     // Add custom JSdoc tags required for apiDoc.
     "jsdoc/check-tag-names": [
