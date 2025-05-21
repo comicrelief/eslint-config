@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   "extends": [
     "./mixins/base.js",
     "./mixins/flowtype.js",
