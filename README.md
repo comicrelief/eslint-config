@@ -73,7 +73,7 @@ yarn add --dev \
   eslint-plugin-flowtype@^8.0.3 \
   eslint-plugin-import@^2.31.0 \
   eslint-plugin-sonarjs@^3.0.2 \
-  eslint-plugin-unicorn@^59.0.1
+  eslint-plugin-unicorn@^56.0.1
 ```
 
 ### `@comicrelief/eslint-config/mixins/base`
@@ -120,7 +120,7 @@ yarn add --dev \
 
 ```bash
 yarn add --dev \
-  eslint-plugin-unicorn@^59.0.1
+  eslint-plugin-unicorn@^56.0.1
 ```
 
 ## Development
