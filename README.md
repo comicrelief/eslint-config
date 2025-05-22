@@ -2,7 +2,7 @@
 
 Shared ESLint configuration for Comic Relief codebases.
 
-If you're upgrading to version 2.x, see [Upgrade guides](#1x-to-2x).
+If you're upgrading from a previous major version, see [Upgrade guides](#1x-to-2x).
 
 ## Usage
 
@@ -69,6 +69,7 @@ The commands below will install everything you need for each config, including i
 
 ```bash
 yarn add --dev \
+  @babel/core@^7.21.1 \
   @babel/eslint-parser@^7.21.1 \
   eslint-plugin-flowtype@^8.0.3 \
   eslint-plugin-import@^2.31.0 \
@@ -157,3 +158,20 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
   Package managers have no obligation to place *subdependencies* in `node_modules`, which means having them as dependencies of our config is not a guaranteed way of making them available to ESLint. So far we've just been lucky. They are now all peer dependencies.
 
   See [Dependencies](#dependencies) for what you need to install.
+
+### 1.x/2.x to 3.x
+
+- **You must add the following rule to the .eslintrc of your target repo:**
+
+```json
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "requireConfigFile": false
+  },
+```
+
+If you see the following error when running `yarn lint`, it's likely this step has been missed.
+
+```bash
+0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
+```
