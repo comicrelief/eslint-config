@@ -165,7 +165,7 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
 
 ### 1.x/2.x to 3.x
 
-- **You must add the following rule to the .eslintrc of your target repo:**
+- **You must add the following rule to the .eslintrc or .eslintrc.yml of your target repo:**
 
 JSON:
 ```json
