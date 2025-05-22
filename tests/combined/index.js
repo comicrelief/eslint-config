@@ -8,12 +8,6 @@ export type User = {
   active: boolean,
 };
 
-// Modern JavaScript (unicorn)
-export const users = [
-  { id: 1, name: 'Alice', active: true },
-  { id: 2, name: 'Bob', active: false },
-];
-
 // Good practices (sonarjs)
 export const getActiveUsers = () => users.filter((user) => user.active);
 

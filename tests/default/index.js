@@ -33,9 +33,6 @@ export async function fetchData(url) {
   return response.data;
 }
 
-// Array methods (unicorn prefers these over loops)
-export const doubled = array.map((num) => num * 2);
-
 // Object with method (tests various syntax features)
 export const testObject = {
   name: 'Test',
@@ -44,25 +41,11 @@ export const testObject = {
   },
 };
 
-// Using forEach is allowed (unicorn/no-array-for-each is off)
-export function processItems(items) {
-  const results = [];
-  items.forEach((item) => {
-    results.push(item.value);
-  });
-  return results;
-}
-
 // Using the variables to avoid unused variable warnings
 export const useUnused = () => {
   console.log(unused1);
   return 'Using variables';
 };
-
-// Testing abbreviations (unicorn/prevent-abbreviations is off)
-export const arr = [1, 2, 3];
-export const btn = 'button';
-export const cb = () => {};
 
 // Additional import/export tests
 // Named exports (already have some above)

@@ -30,7 +30,7 @@ If you're upgrading from a previous major version, see [Upgrade guides](#1x-to-2
       requireConfigFile: false
    ```
 
-This will give you the default linting configuration, which includes rules from the `flowtype`, `sonarjs` and `unicorn` plugins.
+This will give you the default linting configuration, which includes rules from the `flowtype` and `sonarjs` plugins.
 
 ## Mixins
 
@@ -42,7 +42,6 @@ As well as our default ESLint config, various common customisations are availabl
 - `jsdoc`: Adds [JSDoc](https://github.com/gajus/eslint-plugin-jsdoc#readme) rules.
 - `mocha`: Uses the `mocha` environment.
 - `sonarjs`: Adds [SonarJS](https://github.com/SonarSource/eslint-plugin-sonarjs) rules.
-- `unicorn`: Adds [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn#readme) rules.
 - `apiDoc`: Extends `jsdoc` to include [apiDoc](https://apidocjs.com/) tags.
 
 For example, in order for linting to work in tests, you should include the `jest` or `mocha` mixin:
@@ -79,7 +78,6 @@ yarn add --dev \
   eslint-plugin-flowtype@^8.0.3 \
   eslint-plugin-import@^2.31.0 \
   eslint-plugin-sonarjs@^3.0.2 \
-  eslint-plugin-unicorn@^56.0.1
 ```
 
 ### `@comicrelief/eslint-config/mixins/base`
@@ -120,13 +118,6 @@ yarn add --dev \
   @typescript-eslint/eslint-plugin@^8.32.0 \
   @typescript-eslint/parser@^7.27.1 \
   typescript
-```
-
-### `@comicrelief/eslint-config/mixins/unicorn`
-
-```bash
-yarn add --dev \
-  eslint-plugin-unicorn@^56.0.1
 ```
 
 ## Development

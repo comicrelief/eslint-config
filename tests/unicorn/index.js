@@ -17,11 +17,6 @@ export const formatGreeting = (name) => `Hello, ${name}!`;
 // Using proper array methods
 export const findItem = (items, id) => items.find(item => item.id === id);
 
-// Test prefer-spread
-export function combineArrays(arr1, arr2) {
-  return [...arr1, ...arr2]; // unicorn prefers this over Array.concat
-}
-
 // Test prefer-add-event-listener
 export function setupEvents(element) {
   element.addEventListener('click', () => {}); // preferred over onclick

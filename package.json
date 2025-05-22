@@ -22,7 +22,7 @@
     "eslint": "^8.57.1",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-jsdoc": "^50.6.17",
-    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-sonarjs": "^3.0.2"
   },
   "peerDependenciesMeta": {
     "@babel/eslint-parser": {

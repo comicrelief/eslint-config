@@ -66,6 +66,5 @@ expect_lint_passes mocha
 expect_lint_passes jest
 expect_lint_passes flowtype
 expect_lint_passes sonarjs
-expect_lint_passes unicorn
 expect_lint_passes combined
 report
