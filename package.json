@@ -23,7 +23,6 @@
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-jsdoc": "^50.6.17",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "eslint-plugin-unicorn": "^56.0.1"
   },
   "peerDependenciesMeta": {
     "@babel/eslint-parser": {
@@ -39,9 +38,6 @@
       "optional": true
     },
     "eslint-plugin-sonarjs": {
-      "optional": true
-    },
-    "eslint-plugin-unicorn": {
       "optional": true
     }
   },
@@ -62,7 +58,6 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "eslint-plugin-unicorn": "^56.0.1",
     "semantic-release": "^24.2.4",
     "typescript": "^5.8.3"
   },
