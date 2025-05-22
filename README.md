@@ -73,6 +73,7 @@ The commands below will install everything you need for each config, including i
 
 ```bash
 yarn add --dev \
+  eslint@^8.57.1 \
   @babel/core@^7.21.1 \
   @babel/eslint-parser@^7.21.1 \
   eslint-plugin-flowtype@^8.0.3 \
@@ -164,6 +165,12 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
   See [Dependencies](#dependencies) for what you need to install.
 
 ### 1.x/2.x to 3.x
+
+- **ESLint 8.57 and compatible dependencies are required** (as of 2.0.0)
+
+  At time of writing, ESLint 9 is available, however many of our dependencies have yet to catch up. We are using the last released version of 8.
+
+  ESLint, and all the upgraded dependencies, can be added by running the yarn add commands in [Dependencies](#dependencies).
 
 - **You must add the following rule to the .eslintrc or .eslintrc.yml of your target repo:**
 
