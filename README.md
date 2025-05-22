@@ -24,6 +24,10 @@ If you're upgrading from a previous major version, see [Upgrade guides](#1x-to-2
    # .eslintrc.yml
    extends:
      - '@comicrelief/eslint-config'
+
+    parserOptions:
+      parser: '@babel/eslint-parser'
+      requireConfigFile: false
    ```
 
 This will give you the default linting configuration, which includes rules from the `flowtype`, `sonarjs` and `unicorn` plugins.
@@ -163,11 +167,23 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
 
 - **You must add the following rule to the .eslintrc of your target repo:**
 
+JSON:
 ```json
   "parserOptions": {
     "parser": "@babel/eslint-parser",
     "requireConfigFile": false
   },
+```
+
+YAML:
+```yaml
+extends:
+  - '@comicrelief/eslint-config'
+  - '@comicrelief/eslint-config/mixins/jest'
+
+parserOptions:
+  parser: '@babel/eslint-parser'
+  requireConfigFile: false
 ```
 
 If you see the following error when running `yarn lint`, it's likely this step has been missed.
