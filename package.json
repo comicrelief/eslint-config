@@ -18,6 +18,7 @@
   },
   "peerDependencies": {
     "@babel/eslint-parser": "^7.27.1",
+    "@stylistic/eslint-plugin": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "eslint": "^8.57.1",
     "eslint-plugin-flowtype": "^8.0.3",
@@ -26,6 +27,9 @@
   },
   "peerDependenciesMeta": {
     "@babel/eslint-parser": {
+      "optional": true
+    },
+    "@stylistic/eslint-plugin": {
       "optional": true
     },
     "@typescript-eslint/eslint-plugin": {
@@ -47,6 +51,7 @@
     "@babel/plugin-syntax-flow": "^7.27.1",
     "@babel/plugin-transform-react-jsx": "^7.27.1",
     "@babel/preset-env": "^7.27.1",
+    "@stylistic/eslint-plugin": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "chai": "^5.2.0",

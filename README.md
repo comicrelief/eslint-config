@@ -196,3 +196,6 @@ We are no longer using the Unicorn ruleset, and can be removed:
 ```bash
 yarn remove eslint-plugin-unicorn
 ```
+
+- Node version upgrade
+The `@stylistic/eslint-plugin` package requires Node v20+. As such this eslint-config version may not be suitable for older repos not yet upgraded beyond v18.

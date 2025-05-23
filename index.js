@@ -4,4 +4,12 @@ module.exports = {
     "./mixins/flowtype.js",
     "./mixins/sonarjs.js",
   ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "extends": [
+        "./mixins/ts.js"
+      ]
+    }
+  ]
 };
