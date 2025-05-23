@@ -166,37 +166,37 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
 
 - **You must add the following rule to the .eslintrc or .eslintrc.yml of your target repo:**
 
-JSON:
-```json
-  "parserOptions": {
-    "parser": "@babel/eslint-parser",
-    "requireConfigFile": false
-  },
-```
+  JSON:
+  ```json
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
+    },
+  ```
 
-YAML:
-```yaml
-extends:
-  - '@comicrelief/eslint-config'
-  - '@comicrelief/eslint-config/mixins/jest'
+  YAML:
+  ```yaml
+  extends:
+    - '@comicrelief/eslint-config'
+    - '@comicrelief/eslint-config/mixins/jest'
 
-parserOptions:
-  parser: '@babel/eslint-parser'
-  requireConfigFile: false
-```
+  parserOptions:
+    parser: '@babel/eslint-parser'
+    requireConfigFile: false
+  ```
 
 If you see the following error when running `yarn lint`, it's likely this step has been missed.
 
-```bash
-0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
-```
+  ```bash
+  0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
+  ```
 
 - **We are no longer using the Unicorn ruleset,** and can be removed:
 
-```bash
-yarn remove eslint-plugin-unicorn
-```
+  ```bash
+  yarn remove eslint-plugin-unicorn
+  ```
 
-Also check your target repo's .eslintrc, it will likely need removing from the 'extends' section.
+  Also check your target repo's .eslintrc, it will likely need removing from the 'extends' section.
 
 - **Node version requirement:** The `@stylistic/eslint-plugin` package requires Node v20+. You will need to use nvm to switch to version 20+ in order to be able to run `yarn lint`.
