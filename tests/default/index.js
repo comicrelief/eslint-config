@@ -18,7 +18,7 @@ export function testFunction(param1, param2) {
   if (param1) {
     return param2;
   }
-  return null; // unicorn/no-null is off
+  return null;
 }
 
 // Using fs and path to avoid unused variable errors
