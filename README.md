@@ -185,7 +185,7 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
     requireConfigFile: false
   ```
 
-If you see the following error when running `yarn lint`, it's likely this step has been missed.
+  If you see the following error when running `yarn lint`, it's likely this step has been missed.
 
   ```bash
   0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
