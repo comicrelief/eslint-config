@@ -191,7 +191,7 @@ If you see the following error when running `yarn lint`, it's likely this step h
 0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
 ```
 
-- We are no longer using the Unicorn ruleset, and can be removed:
+- **We are no longer using the Unicorn ruleset,** and can be removed:
 
 ```bash
 yarn remove eslint-plugin-unicorn
@@ -199,5 +199,4 @@ yarn remove eslint-plugin-unicorn
 
 Also check your target repo's .eslintrc, it will likely need removing from the 'extends' section.
 
-- Node version requirement
-The `@stylistic/eslint-plugin` package requires Node v20+. You will need to use nvm to switch to version 20+ in order to be able to run `yarn lint`.
+- **Node version requirement:** The `@stylistic/eslint-plugin` package requires Node v20+. You will need to use nvm to switch to version 20+ in order to be able to run `yarn lint`.
