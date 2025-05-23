@@ -18,7 +18,7 @@ If you're upgrading from a previous major version, see [Upgrade guides](#1x-to-2
    yarn add --dev @comicrelief/eslint-config eslint-plugin-import
    ```
 
-3. Extend the desired configuration in your project's ESLint config:`
+3. Extend the desired configuration in your project's ESLint config:
 
    ```yaml
    # .eslintrc.yml
