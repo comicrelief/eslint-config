@@ -199,5 +199,5 @@ yarn remove eslint-plugin-unicorn
 
 Also check your target repo's .eslintrc, it will likely need removing from the 'extends' section.
 
-- Node version upgrade
+- Node version requirement
 The `@stylistic/eslint-plugin` package requires Node v20+. You will need to use nvm to switch to version 20+ in order to be able to run `yarn lint`.
