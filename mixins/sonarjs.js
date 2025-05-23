@@ -4,5 +4,8 @@ module.exports = {
   ],
   "plugins": [
     "sonarjs",
-  ]
+  ],
+  "rules": {
+    "sonarjs/no-nested-functions": "off"
+  }
 };
