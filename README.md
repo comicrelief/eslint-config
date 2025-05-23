@@ -117,6 +117,7 @@ yarn add --dev \
 yarn add --dev \
   @typescript-eslint/eslint-plugin@^8.32.0 \
   @typescript-eslint/parser@^7.27.1 \
+  @stylistic/eslint-plugin@^4.2.0 \
   typescript
 ```
 
@@ -161,7 +162,7 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
 
   At time of writing, ESLint 9 is available, however many of our dependencies have yet to catch up. We are using the last released version of 8.
 
-  ESLint, and all the upgraded dependencies, can be added by running the yarn add commands in [Dependencies](#dependencies).
+  ESLint, and all the upgraded dependencies, can be added by running the yarn add commands in [Dependencies](#dependencies). This includes the addition of the [Stylistic](https://eslint.style/packages/default) plugin, which takes on some of our formatting rules that were deprecated from eslint's typescript plugin.
 
 - **You must add the following rule to the .eslintrc or .eslintrc.yml of your target repo:**
 
@@ -190,12 +191,13 @@ If you see the following error when running `yarn lint`, it's likely this step h
 0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
 ```
 
-- Remove Unicorn ruleset
-We are no longer using the Unicorn ruleset, and can be removed:
+- We are no longer using the Unicorn ruleset, and can be removed:
 
 ```bash
 yarn remove eslint-plugin-unicorn
 ```
 
+Also check your target repo's .eslintrc, it will likely need removing from the 'extends' section.
+
 - Node version upgrade
-The `@stylistic/eslint-plugin` package requires Node v20+. As such this eslint-config version may not be suitable for older repos not yet upgraded beyond v18.
+The `@stylistic/eslint-plugin` package requires Node v20+. You will need to use nvm to switch to version 20+ in order to be able to run `yarn lint`.
