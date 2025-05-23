@@ -2,7 +2,7 @@
 
 Shared ESLint configuration for Comic Relief codebases.
 
-If you're upgrading to version 2.x, see [Upgrade guides](#1x-to-2x).
+If you're upgrading from a previous major version, see [Upgrade guides](#1x-to-2x).
 
 ## Usage
 
@@ -24,9 +24,13 @@ If you're upgrading to version 2.x, see [Upgrade guides](#1x-to-2x).
    # .eslintrc.yml
    extends:
      - '@comicrelief/eslint-config'
+
+    parserOptions:
+      parser: '@babel/eslint-parser'
+      requireConfigFile: false
    ```
 
-This will give you the default linting configuration, which includes rules from the `flowtype`, `sonarjs` and `unicorn` plugins.
+This will give you the default linting configuration, which includes rules from the `flowtype` and `sonarjs` plugins.
 
 ## Mixins
 
@@ -38,7 +42,6 @@ As well as our default ESLint config, various common customisations are availabl
 - `jsdoc`: Adds [JSDoc](https://github.com/gajus/eslint-plugin-jsdoc#readme) rules.
 - `mocha`: Uses the `mocha` environment.
 - `sonarjs`: Adds [SonarJS](https://github.com/SonarSource/eslint-plugin-sonarjs) rules.
-- `unicorn`: Adds [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn#readme) rules.
 - `apiDoc`: Extends `jsdoc` to include [apiDoc](https://apidocjs.com/) tags.
 
 For example, in order for linting to work in tests, you should include the `jest` or `mocha` mixin:
@@ -69,27 +72,28 @@ The commands below will install everything you need for each config, including i
 
 ```bash
 yarn add --dev \
-  @babel/eslint-parser@^7.11.3 \
+  eslint@^8.57.1 \
+  @babel/core@^7.21.1 \
+  @babel/eslint-parser@^7.21.1 \
   eslint-plugin-flowtype@^8.0.3 \
-  eslint-plugin-import@^2.25.2 \
-  eslint-plugin-sonarjs@^0.13.0 \
-  eslint-plugin-unicorn@^42.0.0
+  eslint-plugin-import@^2.31.0 \
+  eslint-plugin-sonarjs@^3.0.2 \
 ```
 
 ### `@comicrelief/eslint-config/mixins/base`
 
 ```bash
 yarn add --dev \
-  eslint-plugin-import@^2.25.2
+  eslint-plugin-import@^2.31.0
 ```
 
 ### `@comicrelief/eslint-config/mixins/flowtype`
 
 ```bash
 yarn add --dev \
-  @babel/eslint-parser@^7.11.3 \
-  @babel/plugin-syntax-flow@^7.18.6 \
-  @babel/plugin-transform-react-jsx@^7.18.10 \
+  @babel/eslint-parser@^7.21.1 \
+  @babel/plugin-syntax-flow@^7.27.1 \
+  @babel/plugin-transform-react-jsx@^7.27.1 \
   eslint-plugin-flowtype@^8.0.3
 ```
 
@@ -97,30 +101,24 @@ yarn add --dev \
 
 ```bash
 yarn add --dev \
-  eslint-plugin-jsdoc@^39.3.2
+  eslint-plugin-jsdoc@^50.6.17
 ```
 
 ### `@comicrelief/eslint-config/mixins/sonarjs`
 
 ```bash
 yarn add --dev \
-  eslint-plugin-sonarjs@^0.13.0
+  eslint-plugin-sonarjs@^3.0.2
 ```
 
 ### `@comicrelief/eslint-config/mixins/ts`
 
 ```bash
 yarn add --dev \
-  @typescript-eslint/eslint-plugin@^5.33.0 \
-  @typescript-eslint/parser@^5.33.0 \
+  @typescript-eslint/eslint-plugin@^8.32.0 \
+  @typescript-eslint/parser@^7.27.1 \
+  @stylistic/eslint-plugin@^4.2.0 \
   typescript
-```
-
-### `@comicrelief/eslint-config/mixins/unicorn`
-
-```bash
-yarn add --dev \
-  eslint-plugin-unicorn@^42.0.0
 ```
 
 ## Development
@@ -130,7 +128,7 @@ yarn add --dev \
 - Add / edit / remove rules as required.
 - Test on the example files via `yarn test`.
 - Push a branch to this repo.
-- Test linting on a candidate repo by installing the develpoment branch via `@comicrelief/eslint-config#branch_name`.
+- Test linting on a candidate repo by installing the development branch via `@comicrelief/eslint-config#branch_name`.
 
 ## Notes
 
@@ -155,5 +153,50 @@ The easiest way to edit your `settings.json` is via the Command Palette: ⇧⌘P
 - **You must explicitly add ESLint plugins to your dependencies.** (as of 2.0.3)
 
   Package managers have no obligation to place *subdependencies* in `node_modules`, which means having them as dependencies of our config is not a guaranteed way of making them available to ESLint. So far we've just been lucky. They are now all peer dependencies.
-  
+
   See [Dependencies](#dependencies) for what you need to install.
+
+### 1.x/2.x to 3.x
+
+- **ESLint 8.57 and compatible dependencies are required** (as of 2.0.0)
+
+  At time of writing, ESLint 9 is available, however many of our dependencies have yet to catch up. We are using the last released version of 8.
+
+  ESLint, and all the upgraded dependencies, can be added by running the yarn add commands in [Dependencies](#dependencies). This includes the addition of the [Stylistic](https://eslint.style/packages/default) plugin, which takes on some of our formatting rules that were deprecated from eslint's typescript plugin.
+
+- **You must add the following rule to the .eslintrc or .eslintrc.yml of your target repo:**
+
+  JSON:
+  ```json
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
+    },
+  ```
+
+  YAML:
+  ```yaml
+  extends:
+    - '@comicrelief/eslint-config'
+    - '@comicrelief/eslint-config/mixins/jest'
+
+  parserOptions:
+    parser: '@babel/eslint-parser'
+    requireConfigFile: false
+  ```
+
+  If you see the following error when running `yarn lint`, it's likely this step has been missed.
+
+  ```bash
+  0:0  error  Parsing error: No Babel config file detected for *filepath*. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files
+  ```
+
+- **We are no longer using the Unicorn ruleset,** and can be removed:
+
+  ```bash
+  yarn remove eslint-plugin-unicorn
+  ```
+
+  Also check your target repo's .eslintrc, it will likely need removing from the 'extends' section.
+
+- **Node version requirement:** The `@stylistic/eslint-plugin` package requires Node v20+. You will need to use nvm to switch to version 20+ in order to be able to run `yarn lint`.

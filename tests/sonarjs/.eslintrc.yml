@@ -1,0 +1,8 @@
+root: true
+
+extends:
+  - '../../mixins/sonarjs'
+
+parser: '@babel/eslint-parser'
+parserOptions:
+  requireConfigFile: false

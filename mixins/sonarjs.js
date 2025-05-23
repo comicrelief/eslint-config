@@ -1,8 +1,11 @@
 module.exports = {
   "extends": [
-    "plugin:sonarjs/recommended",
+    "plugin:sonarjs/recommended-legacy",
   ],
   "plugins": [
     "sonarjs",
   ],
+  "rules": {
+    "sonarjs/no-nested-functions": "off"
+  }
 };

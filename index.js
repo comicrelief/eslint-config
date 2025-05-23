@@ -1,8 +1,15 @@
 module.exports = {
   "extends": [
-    "./mixins/base",
-    "./mixins/flowtype",
-    "./mixins/sonarjs",
-    "./mixins/unicorn",
+    "./mixins/base.js",
+    "./mixins/flowtype.js",
+    "./mixins/sonarjs.js",
   ],
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "extends": [
+        "./mixins/ts.js"
+      ]
+    }
+  ]
 };

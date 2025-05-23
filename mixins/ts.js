@@ -1,7 +1,8 @@
 module.exports = {
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "@stylistic"
   ],
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
@@ -18,12 +19,14 @@ module.exports = {
     "indent": "off",
     "no-shadow": "off",
     "no-useless-constructor": "off",
+    "no-empty-function": "off",
     "semi": "off",
-    // these are the replacement "extension rules" from @typescript-eslint
-    "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
-    "@typescript-eslint/indent": ["error", 2, { "SwitchCase": 0 }],
+    // stylistic rules
+    "@stylistic/comma-dangle": ["error", "always-multiline"],
+    "@stylistic/indent": ["error", 2, { "SwitchCase": 0 }],
+    "@stylistic/semi": "error",
+    // non-stylistic typescript rules
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-useless-constructor": "error",
-    "@typescript-eslint/semi": "error",
   },
 }
